@@ -29,7 +29,6 @@
             justify-content: center;
         }
 
-        /* Efeito suave de hover nos cards de venda */
         .card-venda {
             transition: all 0.3s ease;
         }
@@ -120,35 +119,34 @@
     </footer>
 
     <a href="https://wa.me/5547991152416" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] p-4 rounded-full shadow-2xl transition hover:scale-110 z-50">
-        <img src="bancada.png" alt="WhatsApp" class="h-8 w-8">
+        <img src="bancada.jpg" alt="WhatsApp" class="h-8 w-8">
     </a>
 
     <script>
-        // LISTA DE APARELHOS - Edite aqui para atualizar o site
         const aparelhos = [
             {
                 nome: "iPhone 13 PRO MAX 256GB",
                 cor: "Estelar",
                 saude: "92%",
                 preco: "3.150,00",
-                imagem: "iphone13.png", // Substitua pelo link real da foto
-                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no iPhone 13 Estelar"
+                imagem: "iphone13.png", 
+                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no iPhone 13 Pro Max"
             },
             {
                 nome: "iPhone 15 128GB",
-                cor: "azul",
+                cor: "Azul",
                 saude: "92%",
-                preco: "1.890,00",
-                imagem: "iphone15.JPG",
-                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no iPhone 11 Preto"
+                preco: "4.890,00",
+                imagem: "iphone15.JPG", 
+                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no iPhone 15 Azul"
             },
             {
-                nome: "iphone 14 128GB",
+                nome: "iPhone 14 128GB",
                 cor: "Preto",
                 saude: "100%",
-                preco: "2.490,00",
-                imagem: "iphone14.JPG",
-                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no Redmi Note 13"
+                preco: "3.490,00",
+                imagem: "iphone14.JPG", 
+                linkWhats: "https://wa.me/5547991152416?text=Olá, tenho interesse no iPhone 14 Preto"
             }
         ];
 
@@ -156,7 +154,7 @@
             const grid = document.getElementById('grid-produtos');
             grid.innerHTML = aparelhos.map(item => `
                 <div class="card-venda bg-brand-dark p-4 rounded-3xl border border-gray-800 flex flex-col items-center text-center">
-                    <img src="${item.imagem}" alt="${item.nome}" onerror="this.src='https://via.placeholder.com/300x300/111827/FFFFFF?text=${item.nome}'" class="w-full h-48 object-contain mb-4 rounded-xl">
+                    <img src="${item.imagem}" alt="${item.nome}" onerror="this.src='https://via.placeholder.com/300x300/111827/FFFFFF?text=Sem+Foto'" class="w-full h-48 object-contain mb-4 rounded-xl">
                     <span class="text-[10px] bg-brand-red text-white px-3 py-1 rounded-full font-bold mb-2 uppercase tracking-widest">Garantia Expert Cell</span>
                     <h4 class="text-xl font-bold text-white mb-1">${item.nome}</h4>
                     <p class="text-gray-400 text-sm mb-3">Cor: ${item.cor} | Bateria: ${item.saude}</p>
